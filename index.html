@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>社会化分享-轩枫阁</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="post_title" data-thumb="http://www.xuanfengge.com/wp-content/themes/lee2.0/images/logo.png"><h1>社会化分享-轩枫阁</h1></div>
+	<img class="post_img" src="http://www.xuanfengge.com/wp-content/themes/lee2.0/images/logo.png" alt="">
+	<!-- share  -->
+    <div id="sns_share" class="cf">
+        <span class="sns_share_to fl">分享到：</span>
+        <a class="share_weixin share_icon fl" href="javascript:;" title="查看本文二维码，分享至微信"><em>二维码</em></a>
+        <a class="share_tsina share_icon fl" href="javascript:;" title="分享到新浪微博"><em>新浪微博</em></a>
+        <a class="share_tqq share_icon fl" href="javascript:;" title="分享到腾讯微博"><em>腾讯微博</em></a>
+        <a class="share_renren share_icon fl" href="javascript:;" title="分享到人人网"><em>人人网</em></a>
+        <a class="share_tqzone share_icon fl" href="javascript:;" title="分享到QQ空间"><em>QQ空间</em></a>
+
+        <div class="wemcn" id="wemcn">
+             <div id="ewm" class="ewmDiv clearfix">
+                <div class="rwmtext">
+                    <p>扫一扫，用手机观看！</p>
+                    <p>用微信扫描还可以</p>
+                    <p>分享至好友和朋友圈</p> 
+                </div>
+             </div> 
+            <a class="share_icon" href="javascript:void(0)" id="ewmkg"></a>
+            <i class="ewmsj share_icon"></i>
+        </div>
+
+    </div>
+
+<script src="js/jquery.js"></script>
+<script src="js/xuanfeng_sns_share.js"></script>
+<script>
+$(function(){
+    var shareTitle = $(".post_title h1").text()+"轩枫阁";
+    var sinaTitle = '分享文章 「' + shareTitle + '」 （分享自@轩枫Y_me）',
+        renrenTitle = '分享文章 「' + shareTitle + '」（分享自@农航亮(356948827)）',
+        tqqTitle = '分享文章 「' + shareTitle + '」（分享自@轩枫阁）',
+        tqzoneTitle = '分享文章 「' + shareTitle + '」-轩枫阁（分享自@♪紫轩枫、）';
+    var picShare = encodeURIComponent($(".post_title").data("thumb"));
+    
+    $('body').xuanfengSnsShare({
+        tsina:{
+            url : encodeURIComponent(window.location.href),
+            title: sinaTitle,
+            pic: picShare
+        },
+        renren:{
+            url : encodeURIComponent(window.location.href),
+            title: renrenTitle,
+            pic: picShare
+        },
+        tqq:{
+            url : encodeURIComponent(window.location.href),
+            title: tqqTitle,
+            pic: picShare 
+        },
+        tqzone:{
+            url : encodeURIComponent(window.location.href),
+            title: tqzoneTitle,            
+            pic: picShare 
+        }
+    });
+
+    // 微信分享	
+	$(".share_weixin").click(function(){
+		$("#ewmimg").remove();
+		var thisURL = window.location.href,
+			strwrite = "<img id='ewmimg' class='ewmimg' src='https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=L|4&chl=" + thisURL + "' width='85' height='85' alt='轩枫阁文章 二维码分享' />";
+		$("#ewm").prepend(strwrite);
+		$("#wemcn").show();
+	});
+	$("#ewmkg").click(function(){
+		$("#wemcn").hide();
+	});
+        
+});
+</script>
+
+</body>
+</html>
