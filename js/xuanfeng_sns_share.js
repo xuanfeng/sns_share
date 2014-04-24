@@ -6,26 +6,26 @@
 				tsina:{//分享到新浪微博 
 					url : encodeURIComponent(window.location.href),							//分享的url默认是当前页面
 					title : document.title,								//分享的内容默认是当前页面的title
-					appkey : 2220906864,								//xuanfeng新浪微博的appkey
+					appkey : appkey,								//xuanfeng新浪微博的appkey
 					pic : 'http://www.xuanfengge.com/wp-content/themes/lee2.0/images/piano.jpg'	//图片默认是xuanfeng-piano
 				},
 				renren:{//分享到人人网
 					resourceUrl: encodeURIComponent(window.location.href),	 				//分享的url默认是当前页面
 					srcUrl : window.location.href,						//分享的url默认是当前页面
 					title : document.title,								//分享的内容默认是当前页面的title
-					appkey : 243319,									//xuanfeng人人的appkey
+					appkey : appkey,									//xuanfeng人人的appkey
 					pic : 'http://www.xuanfengge.com/wp-content/themes/lee2.0/images/piano.jpg'	//图片默认是xuanfeng-piano
 				},
 				tqq:{//分享到腾讯微博
 					url : encodeURIComponent(window.location.href),							//分享的url默认是当前页面
 					title : document.title,								//分享的内容默认是当前页面的title
-					appkey : 801435972,									//xuanfeng腾讯微博的appkey
+					appkey : appkey,									//xuanfeng腾讯微博的appkey
 					pic : 'http://www.xuanfengge.com/wp-content/themes/lee2.0/images/piano.jpg'	//图片默认是xuanfeng-piano
 				},
 				tqzone:{//分享到QQ空间
 					url : encodeURIComponent(window.location.href),							//分享的url默认是当前页面
 					title : document.title,								//分享的内容默认是当前页面的title
-					appkey : 100566135,									//xuanfeng腾讯微博的appkey
+					appkey : appkey,									//xuanfeng腾讯微博的appkey
 					pic : 'http://www.xuanfengge.com/wp-content/themes/lee2.0/images/piano.jpg'	//图片默认是xuanfeng-piano
 				}
 			},
